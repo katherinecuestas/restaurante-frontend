@@ -10,6 +10,7 @@
   --shadow:0 8px 30px rgba(0,0,0,.25);
 }
 
+
 /* Reset & base */
 *{box-sizing:border-box}
 html,body{height:100%}
@@ -156,3 +157,119 @@ ul{list-style:none; padding:0; margin:0}
   .hero{min-height:64vh}
   .menu-item{grid-template-columns:1fr}
 }
+
+
+/* ===== Overrides de tema oscuro (paleta dorado/crema) ===== */
+html { scroll-behavior:smooth; }
+body{
+  background:var(--negro);
+  color:var(--texto);
+  font-family: system-ui, Poppins, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* Header fijo (en lugar de sticky) */
+.site-header{
+  position:fixed;
+  top:0; left:0; right:0; z-index:1000;
+  backdrop-filter:blur(8px);
+  background:rgba(11,11,11,.85);
+  border-bottom:1px solid rgba(212,175,55,.25);
+}
+.nav{ /* anulamos sticky anterior */
+  position:static;
+  background:transparent;
+  border-bottom:0;
+}
+.nav-inner{ max-width:var(--maxw); padding:12px 24px; }
+.brand strong{ color:var(--texto); }
+.menu a{
+  color:var(--crema);
+  padding:6px 10px; border-radius:8px; font-weight:700;
+}
+.menu a[aria-current="page"], .menu a:hover{
+  background:rgba(212,175,55,.15);
+}
+
+/* Compensar header fijo */
+main{ padding-top:72px; }
+
+/* Hero (usa #inicio para mantener ancla) */
+#inicio{ position:relative; min-height:70vh; display:grid; place-items:center; text-align:center; }
+#inicio .hero-video{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:-2; }
+.hero-overlay{ position:absolute; inset:0; background:rgba(0,0,0,.6); z-index:-1; }
+.hero-content{ padding:40px; }
+.hero-title{ font-size:clamp(2rem,6vw,3.8rem); margin:0 0 16px; color:var(--crema); font-weight:800; }
+.hero-sub{ color:#d8d8d8; max-width:60ch; margin:0 auto 24px; }
+
+.btn{
+  display:inline-block; padding:12px 20px; border-radius:999px; border:none;
+  font-weight:800; text-decoration:none; transition:background .2s, color .2s, transform .2s;
+}
+.btn-primary{ background:var(--dorado); color:var(--negro); }
+.btn-primary:hover{ background:var(--dorado-osc); color:var(--crema); transform:translateY(-1px); }
+.btn-ghost{
+  background:transparent; color:var(--crema); border:1px solid rgba(255,255,255,.25);
+}
+.btn-ghost:hover{ background:rgba(255,255,255,.08); }
+
+/* Secciones / grid */
+.wrap{ max-width:var(--maxw); margin:0 auto; padding:40px 24px; }
+.section-title{ margin-bottom:24px; color:var(--crema); }
+.grid-2{ display:grid; gap:24px; grid-template-columns:1fr; }
+@media(min-width:700px){ .grid-2{ grid-template-columns:1.1fr 1fr; }}
+
+/* Cards claras dorado/crema */
+.card{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(212,175,55,.25);
+  border-radius:var(--radius);
+  padding:20px;
+}
+.card h3{ margin:0 0 8px; color:var(--dorado); }
+.card img{ width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:12px; margin-bottom:12px; }
+
+/* Carta (categorías) – deja el layout anterior pero adapta colores */
+.menu-category{
+  background:var(--crema); color:var(--negro);
+  border:1px solid var(--dorado-osc); border-radius:var(--radius); box-shadow:var(--shadow);
+}
+.menu-category .cat-head{ border-bottom:1px solid rgba(0,0,0,.08); }
+.menu-item{ border-bottom:1px dashed rgba(0,0,0,.12); }
+.menu-item .desc{ color:#333; }
+.menu-item .price{ color:#111; }
+
+/* Testimonios + carrusel */
+.testimonial{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(246,240,230,.2);
+  border-radius:var(--radius);
+  padding:20px;
+  color:var(--crema);
+}
+.stars{ color:var(--dorado); }
+.carousel{ --gap:16px; position:relative; }
+.carousel .viewport{ overflow:hidden; outline:none; }
+.carousel .track{ display:flex; gap:var(--gap); transition:transform .4s ease; will-change:transform; }
+.carousel .slide{ flex:0 0 auto; width:100%; }
+.carousel .nav{
+  position:absolute; top:50%; transform:translateY(-50%);
+  width:40px; height:40px; border-radius:50%;
+  border:1px solid rgba(212,175,55,.35);
+  background:rgba(11,11,11,.85); color:var(--crema);
+  display:grid; place-items:center; box-shadow:0 6px 18px rgba(0,0,0,.25);
+}
+.carousel .nav:hover,.carousel .nav:focus-visible{ background:rgba(212,175,55,.25); }
+.carousel .prev{ left:-8px; } .carousel .next{ right:-8px; }
+@media (min-width:900px){ .carousel .prev{left:-16px} .carousel .next{right:-16px} }
+
+/* Contacto */
+.field input, .field textarea{
+  background:#151515; color:var(--texto);
+  border:1px solid rgba(255,255,255,.2); border-radius:12px; padding:.8rem 1rem;
+}
+.form-msg{ color:#9fe6b8; }
+
+/* Footer */
+.site-footer{ border-top:1px solid rgba(212,175,55,.25); background:#0a0a0a; color:#d8d8d8; }
+.site-footer a{ color:var(--crema); }
+
