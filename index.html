@@ -3,164 +3,311 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>RESTAURANTE — Cocina de autor, reservas por WhatsApp</title>
-  <meta name="description" content="RESTAURANTE: cocina de autor para momentos inolvidables. Reserva por WhatsApp. Menú degustación, almuerzo ejecutivo, cenas románticas y eventos privados." />
-
-  <!-- CSS externo -->
+  <title>RESTAURANTE — Cocina chilena & peruana | Reservas por WhatsApp</title>
+  <meta name="description" content="Cocina chilena y peruana en un ambiente premium. Menú degustación, almuerzo ejecutivo, cenas románticas y eventos privados. Reserva por WhatsApp.">
+  <meta property="og:title" content="RESTAURANTE — Cocina chilena & peruana">
+  <meta property="og:description" content="Experiencias gastronómicas premium. Reserva por WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <div class="nav">
-      <div class="brand"><h1>RESTAURANTE</h1></div>
-      <nav>
-        <ul>
-          <li><a href="#hero">Inicio</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#testimonios">Testimonios</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header" role="banner">
+    <div class="nav container" role="navigation" aria-label="Navegación principal">
+      <a href="#inicio" class="brand">
+        <img src="assets/logo/logo.png" alt="Logo Sabores del Pacífico" class="logo">
+      </a>
+      <ul class="menu" id="site-menu">
+        <li><a href="#inicio" class="nav-link">INICIO</a></li>
+        <li><a href="#quienes-somos" class="nav-link">¿QUIÉNES SOMOS?</a></li>
+        <li><a href="#menu" class="nav-link">MENÚ</a></li>
+        <li><a href="#servicios" class="nav-link">SERVICIOS</a></li>
+        <li><a href="#contacto" class="nav-link">CONTÁCTANOS</a></li>
+        <li>
+  <button id="btn-admin" class="icon-btn" type="button" aria-label="Acceso administrador">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5Zm0 2c-4.418 0-8 2.239-8 5v1h16v-1c0-2.761-3.582-5-8-5Z"/>
+    </svg>
+  </button>
+</li>
+
+      </ul>
     </div>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section id="hero">
-      <video autoplay muted loop playsinline poster="">
-        <source src="assets/videos/hero.mp4" type="video/mp4">
-      </video>
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <h2 class="hero-title">Cocina de autor para momentos inolvidables</h2>
-        <p class="hero-sub">Reservas por WhatsApp · Cupos limitados</p>
-        <a href="#servicios" class="btn">Explorar servicios</a>
+  <main id="contenido">
+    <section id="inicio" class="hero" aria-label="Inicio">
+      <div class="media-wrap">
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg" aria-hidden="true">
+          <source src="assets/videos/hero.mp4" type="video/mp4">
+          Tu navegador no soporta video HTML5.
+        </video>
+        <div class="hero-overlay" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero-content container" data-reveal>
+        <p class="kicker">COCINA CHILENA & PERUANA</p>
+        <h1 class="display">Cocina de autor para momentos inolvidables</h1>
+        <p class="lead">Reservas por WhatsApp. Cupos limitados.</p>
+        <div class="actions">
+          <a id="cta-hero" class="btn btn-primary js-wa-cta" data-wa-msg="Hola, quiero reservar para ___ personas el ___ a las ___">RESERVA AHORA</a>
+          <a class="btn btn-ghost" href="#menu">Ver la carta</a>
+        </div>
       </div>
     </section>
 
-    <!-- SERVICIOS -->
-<section id="servicios" class="wrap">
-  <h2 class="section-title">Nuestros servicios</h2>
-  <div class="grid">
-    <article class="card">
-      <img src="assets/servicios/menu_degustacion.png" alt="Menú Degustación" />
-      <h3>Menú Degustación</h3>
-      <p>Experiencia de siete tiempos con maridaje opcional.</p>
-      <a class="btn" target="_blank" rel="noopener"
-         href="https://wa.me/56956787656?text=Hola%2C%20quiero%20reservar%20Men%C3%BA%20Degustaci%C3%B3n.">RESERVAR AHORA</a>
-    </article>
+    <section id="quienes-somos" class="section container" aria-label="¿Quiénes somos?">
+      <div class="grid-2" data-reveal>
+        <figure class="media">
+          <img loading="lazy" src="assets/quienes-somos.png" alt="Mesa servida con platos chilenos y peruanos" width="960" height="720">
+        </figure>
+        <div class="copy">
+          <p class="kicker">NUESTRA HISTORIA</p>
+          <h2>Tradición, técnica y producto local</h2>
+          <p>Combinamos técnicas contemporáneas con ingredientes de estación para crear experiencias memorables.
+            <strong>Sabor auténtico, atención impecable y ambientes que invitan a celebrar</strong>.
+          </p>
+          <p>Te esperamos para un almuerzo ejecutivo ágil, una cena romántica o un evento privado a tu medida.</p>
+        </div>
+      </div>
+    </section>
 
-    <article class="card">
-      <img src="assets/servicios/menu_ejecutivo.png" alt="Almuerzo Ejecutivo" />
-      <h3>Almuerzo Ejecutivo</h3>
-      <p>Menú rotativo entre semana, rápido y fresco.</p>
-      <a class="btn" target="_blank" rel="noopener"
-         href="https://wa.me/56956787656?text=Hola%2C%20quiero%20reservar%20Almuerzo%20Ejecutivo.">RESERVAR AHORA</a>
-    </article>
+    <section id="menu" class="section container" aria-label="Menú de la casa">
+      <div class="head" data-reveal>
+        <p class="kicker">CARTA</p>
+        <h2>Sabores destacados</h2>
+        <p class="helper">Precios referenciales <em>$—</em>. Consulta disponibles del día.</p>
+      </div>
+      <div id="menu-root" class="menu-root" aria-live="polite"></div>
+    </section>
 
-    <article class="card">
-      <img src="assets/servicios/cena_romantica.png" alt="Cenas Románticas" />
-      <h3>Cenas Románticas</h3>
-      <p>Ambientación especial y menú para dos.</p>
-      <a class="btn" target="_blank" rel="noopener"
-         href="https://wa.me/56956787656?text=Hola%2C%20quiero%20reservar%20Cena%20Rom%C3%A1ntica.">RESERVAR AHORA</a>
-    </article>
+    <section id="servicios" class="section container" aria-label="Servicios">
+      <div class="head" data-reveal>
+        <p class="kicker">EXPERIENCIAS</p>
+        <h2>Nuestros servicios</h2>
+      </div>
+      <div class="cards equal-cards" data-reveal>
+        <article class="card">
+          <img loading="lazy" src="assets/servicios/menu_degustacion.png" alt="Presentación de menú degustación">
+          <h3>Menú Degustación</h3>
+          <p>Experiencia de siete tiempos con maridaje opcional.</p>
+          <button type="button" class="btn btn-primary js-service" data-service="degustacion">RESERVA AHORA</button>
+        </article>
 
-    <article class="card">
-      <img src="assets/servicios/eventos.png" alt="Eventos Privados" />
-      <h3>Eventos Privados</h3>
-      <p>Salones y menús personalizados para tus celebraciones.</p>
-      <a class="btn" target="_blank" rel="noopener"
-         href="https://wa.me/56956787656?text=Hola%2C%20quiero%20cotizar%20un%20Evento%20Privado.">RESERVAR AHORA</a>
-    </article>
-  </div>
-</section>
+        <article class="card">
+          <img loading="lazy" src="assets/servicios/menu_ejecutivo.png" alt="Plato del día para almuerzo ejecutivo">
+          <h3>Almuerzo Ejecutivo</h3>
+          <p>Menú rotativo entre semana, rápido y fresco.</p>
+          <button type="button" class="btn btn-primary js-service" data-service="ejecutivo">RESERVA AHORA</button>
+        </article>
 
+        <article class="card">
+          <img loading="lazy" src="assets/servicios/cena_romantica.png" alt="Mesa para dos con velas">
+          <h3>Cenas Románticas</h3>
+          <p>Ambientación especial y menú para dos.</p>
+          <button type="button" class="btn btn-primary js-service" data-service="romantica">RESERVA AHORA</button>
+        </article>
+      </div>
+    </section>
 
-    <!-- TESTIMONIOS (Carrusel) -->
-<section id="testimonios" class="wrap">
-  <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+    <section id="testimonios" class="section container" aria-label="Testimonios">
+      <div class="head" data-reveal>
+        <p class="kicker">OPINIONES</p>
+        <h2>Lo que dicen nuestros clientes</h2>
+      </div>
 
-  <div class="carousel"
-       data-autoplay="5000"
-       data-items-mobile="1"
-       data-items-desktop="4"
-       aria-label="Carrusel de testimonios">
-    <button class="nav prev" aria-label="Testimonio anterior" type="button">&#10094;</button>
+      <div class="carousel uniform" data-autoplay="5000" data-items-mobile="2" data-items-desktop="4" aria-label="Carrusel de testimonios">
+        <button class="nav prev" aria-label="Testimonio anterior" type="button">&#10094;</button>
 
-    <div class="viewport" role="region" aria-roledescription="carrusel" aria-live="polite" tabindex="0">
-      <ul class="track">
-        <!-- Slide 1 -->
-        <li class="slide">
-          <figure class="testimonial">
-            <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
-            <figcaption class="who">Valentina R.</figcaption>
-            <p class="quote">“Cada plato cuenta una historia. Atención impecable y tiempos perfectos.”</p>
-          </figure>
-        </li>
+        <div class="viewport" role="region" aria-roledescription="carrusel" aria-live="polite" tabindex="0">
+          <ul class="track">
+            <li class="slide">
+              <figure class="testimonial">
+                <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+                <figcaption class="who">Valentina R.</figcaption>
+                <p class="quote">“Cada plato cuenta una historia. Atención impecable y tiempos perfectos.”</p>
+              </figure>
+            </li>
+            <li class="slide">
+              <figure class="testimonial">
+                <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+                <figcaption class="who">Diego M.</figcaption>
+                <p class="quote">“El menú degustación fue una experiencia inolvidable. Volveré sin duda.”</p>
+              </figure>
+            </li>
+            <li class="slide">
+              <figure class="testimonial">
+                <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+                <figcaption class="who">Camila P.</figcaption>
+                <p class="quote">“Ambiente romántico y platos exquisitos. Ideal para celebrar en pareja.”</p>
+              </figure>
+            </li>
+            <li class="slide">
+              <figure class="testimonial">
+                <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+                <figcaption class="who">Javier A.</figcaption>
+                <p class="quote">“El salmón al merkén fue perfecto y la carta de vinos, muy bien curada.”</p>
+              </figure>
+            </li>
+            <li class="slide">
+              <figure class="testimonial">
+                <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+                <figcaption class="who">María José T.</figcaption>
+                <p class="quote">“La causa limeña y el suspiro a la limeña nos transportaron a Lima.”</p>
+              </figure>
+            </li>
+            <li class="slide">
+              <figure class="testimonial">
+                <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+                <figcaption class="who">Felipe C.</figcaption>
+                <p class="quote">“Pastel de choclo con ese punto casero que emociona. 100% recomendado.”</p>
+              </figure>
+            </li>
+            <li class="slide">
+              <figure class="testimonial">
+                <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+                <figcaption class="who">Antonia L.</figcaption>
+                <p class="quote">“Servicio cálido y rápido. El lomo saltado, de los mejores que he probado.”</p>
+              </figure>
+            </li>
+            <li class="slide">
+              <figure class="testimonial">
+                <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+                <figcaption class="who">Rodrigo V.</figcaption>
+                <p class="quote">“El pebre con pan amasado es adictivo. Ya soy cliente frecuente.”</p>
+              </figure>
+            </li>
+            <li class="slide">
+              <figure class="testimonial">
+                <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+                <figcaption class="who">Constanza H.</figcaption>
+                <p class="quote">“Nos prepararon una cena romántica preciosa. Detalles en cada plato.”</p>
+              </figure>
+            </li>
+            <li class="slide">
+              <figure class="testimonial">
+                <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+                <figcaption class="who">Nicolás F.</figcaption>
+                <p class="quote">“Ceviche fresco y potente. Se nota la calidad del producto.”</p>
+              </figure>
+            </li>
+          </ul>
+        </div>
 
-        <!-- Slide 2 -->
-        <li class="slide">
-          <figure class="testimonial">
-            <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
-            <figcaption class="who">Diego M.</figcaption>
-            <p class="quote">“El menú degustación fue una experiencia inolvidable. Volveré sin duda.”</p>
-          </figure>
-        </li>
+        <button class="nav next" aria-label="Siguiente testimonio" type="button">&#10095;</button>
+      </div>
 
-        <!-- Slide 3 -->
-        <li class="slide">
-          <figure class="testimonial">
-            <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
-            <figcaption class="who">Camila P.</figcaption>
-            <p class="quote">“Ambiente romántico y platos exquisitos. Ideal para celebrar en pareja.”</p>
-          </figure>
-        </li>
+    <section id="contacto" class="contacto" aria-label="Formulario de contacto">
+      <div class="container-contacto">
+        <span class="contacto-badge">Contáctanos</span>
+        <form class="contacto-form" novalidate aria-describedby="contacto-ayuda">
+          <p id="contacto-ayuda" hidden>Todos los campos son obligatorios. Recibirás un mensaje de confirmación si los datos son válidos.</p>
 
-        <!-- Slide 4 -->
-        <li class="slide">
-          <figure class="testimonial">
-            <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
-            <figcaption class="who">Javier A.</figcaption>
-            <p class="quote">“Organizamos un evento privado y todo salió perfecto. 100% recomendados.”</p>
-          </figure>
-        </li>
+          <div class="contacto-input__container">
+            <label class="label" for="nombre">Nombre y Apellido</label>
+            <input class="input-form" id="nombre" name="nombre" type="text" placeholder="Tu nombre completo" required />
+          </div>
 
-        <!-- Slide 5 -->
-        <li class="slide">
-          <figure class="testimonial">
-            <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
-            <figcaption class="who">Sofía L.</figcaption>
-            <p class="quote">“La cena romántica superó expectativas: detalles hermosos y sabores perfectos.”</p>
-          </figure>
-        </li>
+          <div class="contacto-input__container">
+            <label class="label" for="correo">Correo electrónico</label>
+            <input class="input-form" id="correo" name="correo" type="email" placeholder="tucorreo@gmail.com" required />
+          </div>
 
-        <!-- Slide 6 -->
-        <li class="slide">
-          <figure class="testimonial">
-            <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
-            <figcaption class="who">Martín C.</figcaption>
-            <p class="quote">“Nuestro evento privado fue impecable. Equipo atento y muy profesional.”</p>
-          </figure>
-        </li>
-      </ul>
-    </div>
+          <div class="contacto-input__container">
+            <label class="label" for="telefono">Teléfono</label>
+            <input class="input-form" id="telefono" name="telefono" type="tel" inputmode="numeric" placeholder="Ej: 987654321" minlength="9" required />
+          </div>
 
-    <button class="nav next" aria-label="Siguiente testimonio" type="button">&#10095;</button>
-  </div>
-</section>
+          <div class="contacto-input__container">
+            <label class="label" for="tipo-solicitud">Tipo de solicitud</label>
+            <select class="input-form" id="tipo-solicitud" name="tipo-solicitud">
+              <option value="">Selecciona una opción</option>
+              <option value="consulta">Consulta</option>
+              <option value="reclamo">Reclamo</option>
+              <option value="felicitaciones">Felicitaciones</option>
+              <option value="reserva">Reserva</option>
+            </select>
+          </div>
 
-<!-- JS del carrusel -->
-<script src="js/script.js" defer></script>
+          <fieldset id="reserva-fields" class="reserva-fields is-hidden" aria-hidden="true" disabled>
+            <legend class="sr-only">Datos de reserva</legend>
 
+            <div class="contacto-input__container">
+              <label class="label" for="r-rut">RUT</label>
+              <input class="input-form" id="r-rut" type="text" placeholder="12.345.678-5">
+            </div>
+
+            <div class="contacto-input__container">
+              <label class="label" for="r-fecha">Fecha</label>
+              <input class="input-form" id="r-fecha" type="date">
+            </div>
+
+            <div class="contacto-input__container">
+              <label class="label" for="r-hora">Hora</label>
+              <input class="input-form" id="r-hora" type="time" step="900" placeholder="12:00">
+              <small class="helper">Disponible entre 12:00 y 23:00.</small>
+            </div>
+
+            <div class="contacto-input__container">
+              <label class="label" for="r-personas">Cantidad de personas</label>
+              <input class="input-form" id="r-personas" type="number" min="1" max="12" placeholder="Ej: 2">
+            </div>
+          </fieldset>
+
+          <p id="reserva-note" class="helper is-hidden">
+            <small>*Atado a menú del día o platos a la carta del día*</small>
+          </p>
+
+          <div class="contacto-input__container">
+            <label class="label" for="mensaje">Mensaje</label>
+            <textarea class="input-form" id="mensaje" name="mensaje" placeholder="Cuéntanos tu consulta" minlength="10" required></textarea>
+          </div>
+
+          <button id="button-submit" type="submit" class="btn btn-primary">Enviar Mensaje</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="ubicacion" class="section container" aria-label="Ubicación">
+      <div class="grid-2 contact" data-reveal>
+        <div>
+          <h2>Visítanos</h2>
+          <p><strong>Dirección:</strong> <span id="addr">Por definir</span></p>
+          <p><strong>Horarios:</strong> Lun–Dom 12:00–23:00</p>
+          <p><strong>Teléfono:</strong> <a id="tel" href="tel:+56XXXXXXXXX">+56 9 0000 0000</a></p>
+          <p><strong>Email:</strong> <a href="mailto:correo@dominio.cl">correo@restaurante.cl</a></p>
+          <div class="actions">
+            
+          </div>
+          <div id="contact-form-slot" aria-label="Sección de formulario adicional (pendiente)" hidden></div>
+        </div>
+
+        <div class="map-wrap">
+          <iframe id="map" title="Ubicación del restaurante" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=@LAT,@LNG&z=15&output=embed"></iframe>
+          <p><a id="map-link" class="map-link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=@LAT,@LNG">Cómo llegar en Google Maps</a></p>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer id="contacto">
-    <p>WhatsApp: <a href="https://wa.me/56956787656" target="_blank">+56 9 5678 7656</a></p>
-    <p>Dirección: [Tu dirección aquí]</p>
-    <p>Horarios: Lun–Dom 12:00–23:00</p>
-    <small>© 2025 RESTAURANTE</small>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <small>© <span id="year"></span> RESTAURANTE. Todos los derechos reservados.</small>
+    </div>
   </footer>
+
+  <a id="fab-wa" class="fab-wa js-wa-cta" aria-label="Abrir conversación de WhatsApp" data-wa-msg="Hola, quiero reservar para ___ personas el ___ a las ___">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 2a10 10 0 0 0-8.66 15.1L2 22l5.07-1.33A10 10 0 1 0 12 2Zm5.4 14.4c-.23.65-1.35 1.24-1.87 1.27-.48.02-1.09.04-1.76-.11a9.33 9.33 0 0 1-4-2.08 10.53 10.53 0 0 1-2.46-3.1c-.26-.46-.58-1.2-.58-1.2s-.14-.98.6-1.56c.51-.41.86-.37 1.1-.33l.18.03c.28.06.43.2.55.48.19.46.63 1.59.68 1.7.05.12.08.25.02.4-.18.44-.55.68-.55.68s-.11.1-.03.24c.08.14.4.66.91 1.07.79.62 1.46.82 1.67.91.21.09.33.08.45-.05.12-.12.51-.59.65-.8.14-.21.29-.18.48-.1.19.08 1.2.56 1.4.66.2.1.34.15.39.24.06.1.06.55-.17 1.2Z"/>
+    </svg>
+  </a>
+
+  <script src="js/script.js" defer></script>
+  <noscript>Para ver el menú dinámico, validación del formulario y mapa, habilita JavaScript.</noscript>
 </body>
 </html>
