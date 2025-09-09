@@ -242,10 +242,10 @@ function validateEmailDetailed(emailRaw) {
 }
 
 function validateChileanRUT(rutRaw) {
-  const raw = (rutRaw || "").trim().toUpperCase().replace(/\./g, "").replace(/\s+/g, "");
+  const raw = (rutRaw || "").trim().toUpperCase().replace(/\./g, "");
   if (!raw) return { ok: false, error: "El RUT no puede estar vacío." };
   const parts = raw.split("-");
-  if (parts.length !== 2) return { ok: false, error: "Formato de RUT inválido. Usa 12.345.678-5" };
+  if (parts.length !== 2) return { ok: false, error: "Formato de RUT inválido. Usa 12345678-5" };
   const body = parts[0];
   const dv = parts[1];
   if (!/^\d{7,8}$/.test(body)) return { ok: false, error: "El cuerpo del RUT debe tener 7 u 8 dígitos." };
@@ -833,3 +833,4 @@ function enforceNumericInput(input, { min = null, max = null } = {}) {
     if (!ok) e.preventDefault();
   });
 }
+
